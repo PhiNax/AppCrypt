@@ -26,7 +26,6 @@ textarea::placeholder {
   font-size: 1.1em;
   color: var(--dark-blue-300);
   text-align: center;
-  padding: 5em;
   line-height: 1.1em;
 }
 /* END TEXTAREA STYLES */
@@ -106,6 +105,9 @@ textarea::placeholder {
 .row-output {
   width: 100%;
 }
+.img-erg {
+  display: none;
+}
 .text-output {
   background: var(--whity);
   box-shadow: 0px 0px 15px 15px rgba(0, 0, 0, 0.08);
@@ -119,11 +121,12 @@ textarea::placeholder {
 .text-output:focus {
   outline: none;
 }
+/* START COPY MESSEGE */
 #label-msg {
-  position: absolute;
+  position: fixed;
   display: none;
-  left: 25%;
-  bottom: 9%;
+  top: 50%;
+  right: 25%;
   width: 50%;
   margin: auto;
   padding: 1.5em;
@@ -135,8 +138,10 @@ textarea::placeholder {
   border-radius: 24px;
 }
 .label-enabled {
-  display: block !important;
+  display: flex !important;
+  justify-content: center;
 }
+/* END COPY MESSEGE */
 /* END OUTPUT*/
 /* START FOOTER*/
 .copyright {
@@ -158,14 +163,15 @@ textarea::placeholder {
     margin: auto;
   }
   .text-input {
-    min-height: 130px;
+    min-height: 189px;
   }
   .text-output {
-    min-height: 275px;
+    min-height: 245px;
   }
   #label-msg {
-    left: 25%;
-    bottom: 25%;
+    right: 33%;
+    top: 50%;
+    width: 33%;
   }
 }
 
@@ -183,13 +189,9 @@ textarea::placeholder {
   .row-output {
     height: 333px;
   }
-  #label-msg {
-    left: 25%;
-    bottom: 19%;
-  }
 }
 /* DESKTOP */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .app-container {
     padding: 13px;
     height: 100vh;
@@ -199,29 +201,67 @@ textarea::placeholder {
     justify-content: center;
     gap: 60px;
   }
-  .container-input {
+  #container-input {
     flex: 1 0 auto;
   }
   .text-input {
-    margin: 150px 0;
+    margin: 101px 0;
   }
   .container-output {
     flex: 0 33%;
     margin-top: 69px;
   }
   .row-output {
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    background-color: var(--whity);
+    border-radius: 24px;
+    padding: 15px;
+  }
+  .img-erg {
+    display: block;
+    width: 100%;
   }
   .text-output {
-    min-height: 683px;
+    min-height: px;
+  }
+  textarea#crypt-out {
+    box-shadow: none;
   }
   textarea::placeholder {
     font-size: 1.5em;
     line-height: 1.5em;
   }
   #label-msg {
-    position: relative;
-    left: 0;
-    bottom: 50%;
+    position: absolute;
+    right: 13%;
+    top: 70%;
+    width: 15%;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .app-container {
+    padding: 13px;
+    height: 100vh;
+    width: 80%;
+    margin: auto;
+  }
+  .container {
+    width: 100%;
+    gap: 90px;
+  }
+
+  .text-input {
+    margin: 160px 0;
+  }
+  .container-output {
+    flex: 0 30%;
+  }
+  #label-msg {
+    right: 15%;
+    top: 70%;
+    width: 15%;
   }
 }

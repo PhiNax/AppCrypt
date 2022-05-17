@@ -27,64 +27,68 @@
     <link rel="stylesheet" href="./css/styles.css" type="text/css" />
   </head>
   <body>
-    <main>
-      <div class="app-container">
-        <div class="container">
-          <div class="container-input">
-            <div class="row-input">
-              <div class="brand">
-                <img
-                  class="brand-logo"
-                  src="./assets/alogo.png"
-                  alt="alura logo"
-                />
-              </div>
-              <div class="input">
-                <textarea
-                  type="textarea"
-                  id="crypt-put"
-                  class="text-input"
-                  placeholder="Ingrese el texto aquí"
-                  required="required"
-                ></textarea>
-              </div>
-              <div>
-                <div class="alert-msg">
-                  <img src="./assets/alert.png" alt="alert icon" />
-                  <span class="alert-text"
-                    >Solo letras minúsculas y sin acentos</span
-                  >
-                </div>
-                <div class="btn-container">
-                  <button type="submit" id="crypt-btn" class="btn-crypt">
-                    Encriptar
-                  </button>
-                  <button type="submit" id="uncrypt-btn" class="btn-uncrypt">
-                    Desencriptar
-                  </button>
-                </div>
-              </div>
+    <main class="app-container">
+      <div class="container">
+        <section id="container-input">
+          <div class="row-input">
+            <div class="brand">
+              <img
+                class="brand-logo"
+                src="./assets/alogo.png"
+                alt="alura logo"
+              />
             </div>
-          </div>
-          <div class="container-output">
-            <div class="row-output">
+            <div class="input">
               <textarea
-                type="text"
-                id="crypt-out"
-                class="text-output"
-                placeholder="Ningún mensaje fue encontrado "
-                readonly
+                type="textarea"
+                id="crypt-put"
+                class="text-input"
+                placeholder="Ingrese el texto aquí"
+                required="required"
               ></textarea>
-              <label id="label-msg">Mensaje Copiado!</label>
+            </div>
+            <div>
+              <div class="alert-msg">
+                <img src="./assets/alert.png" alt="alert icon" />
+                <span class="alert-text"
+                  >Solo letras minúsculas y sin acentos</span
+                >
+              </div>
+              <div class="btn-container">
+                <button type="submit" id="crypt-btn" class="btn-crypt">
+                  Encriptar
+                </button>
+                <button type="submit" id="uncrypt-btn" class="btn-uncrypt">
+                  Desencriptar
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <footer>
-          <div class="copyright">
-            <span> © 2022 por <a href="#">Ignacio Martin</a></span>
+        </section>
+        <section class="container-output">
+          <div class="row-output">
+            <img class="img-erg" src="./assets/bg-erg.png" alt="AppCrypt" />
+            <textarea
+              type="text"
+              id="crypt-out"
+              class="text-output"
+              placeholder="Ningún mensaje fue encontrado "
+              readonly
+            ></textarea>
+            <label id="label-msg">Mensaje Copiado!</label>
           </div>
-        </footer>
+        </section>
       </div>
+      <footer>
+        <div class="copyright">
+          <span>
+            © 2022 por
+            <a href="https://github.com/PhiNax/AppCrypt"
+              >Ignacio Martin</a
+            ></span
+          >
+        </div>
+      </footer>
     </main>
     <script type="text/javascript" src="./js/app.js"></script>
   </body>

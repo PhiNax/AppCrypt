@@ -18,6 +18,8 @@ window.onload = () => {
 
     outputText.value = textCrypt;
     inputText.value = "";
+
+    window.location.href = "#crypt-out";
   });
 
   uncryptButton.addEventListener("click", () => {
@@ -34,13 +36,16 @@ window.onload = () => {
   outputText.addEventListener("click", () => {
     if (outputText.value !== "") {
       outputText.select();
-      document.execCommand("copy");
-      outputText.value = "";
-      inputText.value = "";
+      navigator.clipboard.writeText(outputText.value);
       labelMsg.classList.add("label-enabled");
       setTimeout(() => {
         labelMsg.classList.remove("label-enabled");
+        outputText.value = "";
+        inputText.value = "";
       }, 1500);
+      setTimeout(() => {
+        window.location.href = "#container-input";
+      }, 1700);
     }
   });
 };
