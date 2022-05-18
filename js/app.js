@@ -10,6 +10,7 @@ window.onload = () => {
 
   cryptButton.addEventListener("click", () => {
     let textCrypt = inputText.value
+      .toLowerCase()
       .replace(/e/g, "enter")
       .replace(/i/g, "imes")
       .replace(/a/g, "ai")
@@ -24,6 +25,7 @@ window.onload = () => {
 
   uncryptButton.addEventListener("click", () => {
     let textUnCrypt = inputText.value
+      .toLowerCase()
       .replace(/enter/g, "e")
       .replace(/imes/g, "i")
       .replace(/ai/g, "a")
